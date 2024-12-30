@@ -6,8 +6,14 @@ import { Displace, LayerMaterial } from "lamina";
 import { useMemo, useRef, useEffect } from "react";
 import { MathUtils, Mesh, Vector3 } from "three";
 import { Displace as DisplaceType } from "lamina/vanilla";
-import { DisplaceProps } from "lamina/types";
 import { useTheme } from '../app/ThemeContext';
+
+// Define our own DisplaceProps type
+interface DisplaceProps {
+  strength?: number;
+  scale?: number;
+  offset?: [number, number, number];
+}
 
 export default function Blob({
   displaceProps,

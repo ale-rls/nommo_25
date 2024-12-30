@@ -2,6 +2,7 @@
 
 import { useTheme } from '../app/ThemeContext';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -29,16 +30,19 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 right-0 p-6 z-20 flex gap-8 items-center w-full justify-between">
-      <img 
-        src='nommo_filled.svg' 
-        alt="Nommo Logo"
-        className="h-8 transition-opacity duration-300"
-        style={{
-          opacity: showLogo ? 0.8 : 0,
-          cursor: 'pointer'
-        }}
-        onClick={() => scrollToSection('hero')}
-      />
+      <div className="relative h-8 w-32">
+        <Image 
+          src='/nommo_filled.svg' 
+          alt="Nommo Logo"
+          fill
+          className="transition-opacity duration-300 object-contain"
+          style={{
+            opacity: showLogo ? 0.8 : 0,
+            cursor: 'pointer'
+          }}
+          onClick={() => scrollToSection('hero')}
+        />
+      </div>
       <div className="flex gap-8 items-center">
         <button
           onClick={() => scrollToSection('video')}

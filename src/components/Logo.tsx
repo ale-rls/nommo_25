@@ -1,41 +1,53 @@
 'use client'
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Logo() {
   const [isLogoOutlined, setIsLogoOutlined] = useState(false);
   
   return (
     <>
-      <img 
-        src='nommo_filled.svg' 
+      <Image 
+        src='/nommo_filled.svg' 
         alt="Nommo Logo Filled"
+        width={500}
+        height={500}
         style={{
           opacity: isLogoOutlined ? 0 : 1,
-          width: "500px",
           maxWidth: "90%",
+          position: "fixed",
           transition: "opacity 0.8s ease-in",
           zIndex: 10,
           mixBlendMode: 'difference',
-          position: 'absolute'
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
         }} 
         className="logo_header_filled" 
         onMouseEnter={() => setIsLogoOutlined(true)} 
         onMouseLeave={() => setIsLogoOutlined(false)}
+        priority
       />
-      <img 
-        src='nommo_outline.svg' 
+      <Image 
+        src='/nommo_outline.svg' 
         alt="Nommo Logo Outlined"
+        width={500}
+        height={500}
         style={{
           opacity: isLogoOutlined ? 1 : 0,
-          width: "500px",
           maxWidth: "90%",
+          position: "fixed",
           transition: "opacity 1.1s ease-in",
           zIndex: 10,
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
         }} 
         className="logo_header_outlined" 
         onMouseEnter={() => setIsLogoOutlined(true)} 
         onMouseLeave={() => setIsLogoOutlined(false)}
+        priority
       />
     </>
   );
