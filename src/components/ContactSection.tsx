@@ -18,7 +18,7 @@ export function ContactSection() {
 
         {/* Right column - Buttons */}
         <div className="lg:col-span-4 flex justify-center gap-4">
-          <Button variant='secondary' onClick={() => router.push('/login')}>
+          <Button variant='secondary' onClick={() => router.push('/')}>
             Talk to Sales
           </Button>
         </div>

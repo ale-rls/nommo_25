@@ -6,6 +6,7 @@ import Logo from '@/components/Logo';
 import Blob from '@/components/Blob';
 import Lighting from '@/components/Lighting';
 import { ContactSection } from "@/components/ContactSection";
+import { VideoSection } from "@/components/VideoSection";
 
 export default function App() {
   const [loaded, setLoaded] = useState(true);
@@ -39,19 +40,7 @@ export default function App() {
       </section>
 
       {/* Video Section */}
-      <section id="video" className="min-h-screen flex justify-center items-center">
-        <div style={{ 
-          width: '80%', 
-          maxWidth: '1200px', 
-          aspectRatio: '16/9', 
-          background: '#333',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-          Video Placeholder
-        </div>
-      </section>
+      <VideoSection />
 
       {/* Contact Section */}
       <ContactSection />
