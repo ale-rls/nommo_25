@@ -16,7 +16,7 @@ export default function Logo() {
         style={{
           opacity: isLogoOutlined ? 0 : 1,
           maxWidth: "90%",
-          position: "fixed",
+          position: "absolute",
           transition: "opacity 0.8s ease-in",
           zIndex: 10,
           mixBlendMode: 'difference',
@@ -37,7 +37,7 @@ export default function Logo() {
         style={{
           opacity: isLogoOutlined ? 1 : 0,
           maxWidth: "90%",
-          position: "fixed",
+          position: "absolute",
           transition: "opacity 1.1s ease-in",
           zIndex: 10,
           top: '50%',

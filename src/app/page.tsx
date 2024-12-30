@@ -14,7 +14,7 @@ export default function App() {
   return (
     <main>
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex justify-center items-center">
+      <section id="hero" className="min-h-screen flex justify-center items-center relative">
         <Logo />
         <Canvas
           orthographic
