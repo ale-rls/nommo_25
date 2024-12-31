@@ -41,8 +41,8 @@ export default function Blob({
       const easedProgress = easeInOutCubic(scrollProgress);
       
       // Further reduced ranges: strength goes from 1 to 1.25, scale goes from 2 to 2.5
-      strength.current = 1 + (easedProgress * 0.25);
-      scale.current = 2 + (easedProgress * 0.5);
+      strength.current = 1 + (easedProgress * 0.195);
+      scale.current = 2 + (easedProgress * 0.05);
     };
 
     // Call once to set initial values
