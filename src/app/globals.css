@@ -91,3 +91,8 @@ canvas:active {
 .nav-button:not(:hover)::after {
   transform-origin: right;
 }
+
+/* Invert SVG color in dark mode */
+[data-theme='dark'] .invert-svg {
+  filter: invert(0.4);
+}

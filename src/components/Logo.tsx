@@ -44,7 +44,7 @@ export default function Logo() {
           left: '50%',
           transform: 'translate(-50%, -50%)'
         }} 
-        className="logo_header_outlined" 
+        className="logo_header_outlined invert-svg" 
         onMouseEnter={() => setIsLogoOutlined(true)} 
         onMouseLeave={() => setIsLogoOutlined(false)}
         priority
